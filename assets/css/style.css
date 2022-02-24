@@ -1,0 +1,143 @@
+:root{
+  --cyberpink: #e872f7;
+  --background-colour:#343435;
+
+}
+
+*{
+  
+    color:var(--cyberpink);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+::selection{
+    background-color: turquoise;
+    color:black;
+}
+
+header{
+    text-align: center;
+    padding:2.5rem 0;
+}
+
+body{
+    line-height: 1.5;
+    font-size:1rem;
+    background-color: var(--background-colour);
+}
+
+code {
+    /* Monospace font stack is used for our code blocks to make it look more like code */
+    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+      'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+      'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+      monospace;
+    color:white;  
+  }
+
+
+/* card design */
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 1.5rem;
+    flex-direction: row;
+}
+
+.justify-center {
+    justify-content: center;
+  }
+
+.card-container{
+    padding: 1.2rem;
+    flex: 1 0 100%;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 2.5rem;
+
+
+}
+
+.card{
+    /* border:solid white 2px; */
+    border-radius: 0.25rem;
+    padding:1rem;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    min-height:100%;
+    outline:2px dashed white;
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.card .card-header{
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    position:relative;
+    margin:-2.4rem 0 1.5rem 0;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--background-colour);
+}
+
+.card:hover, .card:hover .card-header{
+    box-shadow: inset 0px 0px 20px var(--cyberpink), 0 0 55px var(--cyberpink);
+}
+
+.card .code-block {
+    flex-grow:1;
+}
+
+.card pre{
+    white-space: pre-wrap;
+    overflow:auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: white;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    rgba(232, 102, 236, 0.6) 0%,
+    rgba(232, 102, 236, 0.3) 50%,
+    rgba(105, 41, 255, 0.3) 100%);
+    display:flex;
+    align-items: center;
+  );
+}
+
+.card pre:active {
+    user-select: all;
+}
+
+/* footer */
+footer{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-container {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .card-container:last-child {
+        flex-grow: 1;
+      }
+    }
+@media screen and (min-width: 992px) {
+    header {
+        width: 75%;
+    }
+    
+    .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    }
+      
