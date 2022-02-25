@@ -1,5 +1,5 @@
 :root{
-  --cyberpink: #e872f7;
+  --cyberpink: #de71ec;
   --background-colour:#343435;
 
 }
@@ -40,8 +40,8 @@ code {
 /* card design */
 .row{
     display:flex;
-    flex-wrap: wrap;
-    margin: 0 1.5rem;
+    flex-wrap:wrap;
+    margin: 0 3.5rem;
     flex-direction: row;
 }
 
@@ -50,10 +50,11 @@ code {
   }
 
 .card-container{
-    padding: 1.2rem;
+    padding: 2.2rem;
     flex: 1 0 100%;
     transition: flex-basis 500ms linear;
     margin-bottom: 2.5rem;
+    width:50%;
 
 
 }
@@ -80,6 +81,8 @@ code {
     margin:-2.4rem 0 1.5rem 0;
     transition: all 0.5s ease-in-out;
     background-color: var(--background-colour);
+    justify-content: center;
+    text-align: center;
 }
 
 .card:hover, .card:hover .card-header{
@@ -116,6 +119,8 @@ footer{
     justify-content: center;
     align-content: center;
     flex-direction: row;
+    padding:2rem;
+    margin:1rem;
 }
 
 
@@ -135,9 +140,9 @@ footer{
         width: 75%;
     }
     
-    .card-column {
-        flex: 0 0 33.333%;
+    .card-container {
+        flex: 0 0 33%;
         max-width: 33.333%;
     }
-    }
+    
       
